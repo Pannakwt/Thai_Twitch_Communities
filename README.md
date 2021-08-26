@@ -34,7 +34,7 @@ This is the output from generating the graph in Gephi. The placement of node is 
 From the result, the nodes with the same color can be assumed that these channels have been watched by the same group of viewers. Another thing to notice is most of the nodes that have many connections are placed close to the center while the nodes that have few connections are placed further from the center.
 
 
-<img align="center" src="./visualization/legend.jpg" width="50%" height="50%">
+<img src="./visualization/legend.jpg" width="50%" height="50%">
 
 I've made a table and name the community for each color by finding related characteristics between the channel in the community. From my observation, most of the nodes from the same color are streamed the same games. So I name the communities name based on the game they played.
 
