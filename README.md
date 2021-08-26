@@ -22,18 +22,18 @@ There are two parts of data to collect, channels and chatters. These data are co
 ## Making the graph
 
 - Get your credentials and fill in at [credentials.json](./data/credentials.json) and configure your settings in [main.py](./code/main.py). You can find the details of the function arguments in the docstring of each function in [collecting.py](./code/collecting.py).
-- Collect channels and chatters data by running [main.py]. Choose the period and how often you will collect the data. You can set the task to run it automatically in the windows task scheduler.
+- Collect channels and chatters data by running [main.py](./code/main.py). Choose the period and how often you will collect the data. You can set the task to run it automatically in the windows task scheduler.
 - After collecting all the data, set the overlap_threshold in the [generate_gephi_data.py](./code/generate_gephi_data.py) to be the optimal value. Then run the script to generate node and edge data to use in Gephi. The weight between two channels that below the overlap_threshold will be considered as no relation and will exclude from the edge data.
 - Create the graph in Gephi by import node and edge data, choose your layout, run the modularity on the statistics section to detect communities, set the color and size of the node to define the communities and size (numbers of viewers) of a channel.
 
 ## Discussion
 
-![output](./visualization/output.png)
+<img src="./visualization/output.png" width="70%" height="70%">
 
 This is the output from generating the graph in Gephi. The placement of node is done by Force Atlas layout algorithm and extract the community by calculating Modularity. 
 From the result, the nodes with the same color can be assumed that these channels have been watched by the same group of viewers. Another thing to notice is most of the nodes that have many connections are placed close to the center while the nodes that have few connections are placed further from the center.
 
-![legend](./visualization/legend.jpg)
+<img src="./visualization/output.png" width="50%" height="50%">
 
 I've made a table and name the community for each color by finding related characteristics between the channel in the community. From my observation, most of the nodes from the same color are streamed the same games. So I name the communities name based on the game they played.
 
